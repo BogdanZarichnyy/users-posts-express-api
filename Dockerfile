@@ -1,5 +1,5 @@
 # Використовуємо образ лінукс Alpine з версією node 22.17.0
-.FROM node:22.17.0-alpine
+FROM node:22.17.0-alpine
 
 # Вказуємо нашу робочу директорію
 WORKDIR /app
