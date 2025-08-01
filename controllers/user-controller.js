@@ -113,6 +113,7 @@ const UserController = {
             filePath = req.file.path;
         }
 
+        // Перевірка, що користувач обновляє свою інформацію
         if (id !== req.user.userId) {
             return res.status(403).json({ error: 'Немає доступу' });
         }
@@ -133,7 +134,7 @@ const UserController = {
                 data: {
                     email: email || undefined,
                     name: name || undefined,
-                    avatarUrl: filePath ? `${filePath}` : undefined,
+                    avatarUrl: filePath ? `/${filePath}` : undefined,
                     dateOfBirth: dateOfBirth || undefined,
                     bio: bio || undefined,
                     location: location || undefined
